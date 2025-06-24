@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan BL Fans - GMMTV Actors & Dramas</title>
+    <style>
+        :root {
+            --primary: #6a1b9a;
+            --secondary: #9c27b0;
+            --light: #f3e5f5;
+            --dark: #4a148c;
+            --text: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            position: relative;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+            background-color: var(--light);
+        }
+        
+        nav a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .search-container {
+            padding: 2rem 0;
+            background-color: white;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        #search-input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        #search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .card-text {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 2rem 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .actor-details, .drama-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+            display: none;
+        }
+        
+        .detail-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .detail-header {
+                flex-direction: row;
+            }
+        }
+        
+        .detail-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-info {
+            flex: 1;
+        }
+        
+        .detail-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .detail-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .detail-text {
+            margin-bottom: 1rem;
+        }
+        
+        .detail-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-section-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-text {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            grid-column: 1 / -1;
+        }
+        
+        .status-upcoming {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 8px;
+        }
+        
+        .status-ongoing {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kenyan BL Fans</h1>
+            <p class="tagline">Discover your favorite GMMTV BL actors and dramas</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#" class="nav-link active" data-tab="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-tab="actors">Actors</a></li>
+                <li><a href="#" class="nav-link" data-tab="dramas">Dramas</a></li>
+                <li><a href="#" class="nav-link" data-tab="upcoming">Upcoming</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search actors or dramas...">
+                <i class="search-icon">🔍</i>
+            </div>
+        </div>
+    </div>
+    
+    <main class="container">
+        <div id="home" class="tab-content active">
+            <h2 class="section-title">Welcome Kenyan BL Fans!</h2>
+            <p>This is your go-to resource for discovering all your favorite GMMTV Boys' Love actors and dramas. Whether you're a new fan looking to learn more about the actors or searching for your next BL drama to watch, we've got you covered.</p>
+            
+            <h3 class="section-title" style="margin-top: 2rem;">Featured Actors</h3>
+            <div class="grid" id="featured-actors">
+                <!-- Featured actors will be inserted here by JavaScript -->
+            </div>
+            
+            <h3 class="section-title">Popular Dramas</h3>
+            <div class="grid" id="featured-dramas">
+                <!-- Featured dramas will be inserted here by JavaScript -->
+            </div>
+        </div>
+        
+        <div id="actors" class="tab-content">
+            <h2 class="section-title">GMMTV BL Actors</h2>
+            <div class="grid" id="actors-grid">
+                <!-- All actors will be inserted here by JavaScript -->
+            </div>
+        </div>
+        
+        <div id="dramas" class="tab-content">
+            <h2 class="section-title">GMMTV BL Dramas</h2>
+            <div class="grid" id="dramas-grid">
+                <!-- All dramas will be inserted here by JavaScript -->
+            </div>
+        </div>
+        
+        <div id="upcoming" class="tab-content">
+            <h2 class="section-title">Upcoming GMMTV BL Dramas</h2>
+            <div class="grid" id="upcoming-grid">
+                <!-- Upcoming dramas will be inserted here by JavaScript -->
+            </div>
+        </div>
+        
+        <div id="actor-detail" class="actor-details">
+            <a href="#" class="back-btn" id="back-to-actors">← Back to Actors</a>
+            <div class="detail-header">
+                <img src="" alt="Actor photo" class="detail-img" id="actor-detail-img">
+                <div class="detail-info">
+                    <h1 class="detail-title" id="actor-detail-name"></h1>
+                    <h2 class="detail-subtitle" id="actor-detail-bio"></h2>
+                    <div class="detail-text" id="actor-detail-about"></div>
+                    
+                    <div class="detail-section">
+                        <h3 class="detail-section-title">Personal Information</h3>
+                        <p><strong>Birthdate:</strong> <span id="actor-detail-birthdate"></span></p>
+                        <p><strong>Height:</strong> <span id="actor-detail-height"></span></p>
+                        <p><strong>Instagram:</strong> <a href="#" target="_blank" id="actor-detail-instagram"></a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3 class="detail-section-title">BL Dramas</h3>
+                <div class="grid" id="actor-dramas-grid">
+                    <!-- Actor's dramas will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div id="drama-detail" class="drama-details">
+            <a href="#" class="back-btn" id="back-to-dramas">← Back to Dramas</a>
+            <div class="detail-header">
+                <img src="" alt="Drama poster" class="detail-img" id="drama-detail-img">
+                <div class="detail-info">
+                    <h1 class="detail-title" id="drama-detail-title"></h1>
+                    <h2 class="detail-subtitle" id="drama-detail-year"></h2>
+                    <div class="detail-text" id="drama-detail-synopsis"></div>
+                    
+                    <div class="detail-section">
+                        <h3 class="detail-section-title">Details</h3>
+                        <p><strong>Episodes:</strong> <span id="drama-detail-episodes"></span></p>
+                        <p><strong>Status:</strong> <span id="drama-detail-status"></span></p>
+                        <p><strong>Genres:</strong> <span id="drama-detail-genres"></span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3 class="detail-section-title">Cast</h3>
+                <div class="grid" id="drama-cast-grid">
+                    <!-- Drama's cast will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="mt-8 text-center text-purple-300 text-sm">
+            <p>© <span id="currentYear"></span> Kenyan BL Fans. All information is for educational purposes only.</p>
+            <p class="mt-1">We do not claim ownership of any images or content.</p>
+          </div>
+    </footer>
+    
+    <script>
+        // Data for all actors
+        const actors = [
+            {
+                id: 1,
+                name: "Gun Atthaphan Phunsawat",
+                bio: "Thai actor and singer",
+                about: "Gun Atthaphan Phunsawat is an actor born in Bangkok, Thailand. He is signed under GMMTV. He started to study Business Administration at Bangkok University before switching his studies to Political Science at Ramkhamhaeng University.",
+                birthdate: "October 4, 1993",
+                height: "169 cm",
+                instagram: "https://www.instagram.com/gun_atthaphan/",
+                image: "https://i.mydramalist.com/73Z82D_5c.jpg",
+                dramas: [9, 10, 24]
+            },
+            {
+                id: 2,
+                name: "Off Jumpol Adulkittiporn",
+                bio: "Thai actor and model",
+                about: "Off jumpol Adulkittiporn, born in Bangkok, Thailand, is an actor, model, singer, and compère under GMMTV (จีเอ็มเอ็มทีวี). After completing his secondary education in Wat Rajabopit School, he went on to graduate from Silpakorn University's Faculty of Information and Communications Technology.",
+                birthdate: "January 20, 1991",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/winmetawin/",
+                image: "https://www.tvtime.com/_next/image?url=https%3A%2F%2Fartworks.thetvdb.com%2Fbanners%2Fperson%2F8036744%2F67538a12b4bb6.jpg&w=640&q=75",
+                dramas: [9, 10, 24]
+            },
+            {
+                id: 3,
+                name: "Gulf Kanawut",
+                bio: "Thai actor and model",
+                about: "Gulf Kanawut Traipipattanapong is a Thai actor and model. He rose to fame for his role as Type in the BL series 'TharnType: The Series'.",
+                birthdate: "December 4, 1997",
+                height: "185 cm",
+                instagram: "https://www.instagram.com/gulfkanawut/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [4, 5]
+            },
+            {
+                id: 4,
+                name: "Mew Suppasit",
+                bio: "Thai actor, singer and model",
+                about: "Mew Suppasit Jongcheveevat is a Thai actor, singer, and model. He is best known for his role as Tharn in 'TharnType: The Series'.",
+                birthdate: "February 21, 1991",
+                height: "181 cm",
+                instagram: "https://www.instagram.com/mewsuppasit/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [4, 5]
+            },
+            {
+                id: 5,
+                name: "Tay Tawan",
+                bio: "Thai actor and model",
+                about: "Tay Tawan Vihokratana is a Thai actor and model. He is known for his roles in various BL series including 'Dark Blue Kiss' and 'Kiss Me Again'.",
+                birthdate: "July 20, 1991",
+                height: "181 cm",
+                instagram: "https://www.instagram.com/tawan_v/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [6, 7, 8]
+            },
+            {
+                id: 6,
+                name: "New Thitipoom",
+                bio: "Thai actor and model",
+                about: "New Thitipoom Techaapaikhun is a Thai actor and model. He is known for his roles in BL series like 'Dark Blue Kiss' and 'Kiss Me Again'.",
+                birthdate: "September 30, 1993",
+                height: "180 cm",
+                instagram: "https://www.instagram.com/newyxp/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [6, 7, 8]
+            },
+            {
+                id: 7,
+                name: "Off Jumpol",
+                bio: "Thai actor and model",
+                about: "Off Jumpol Adulkittiporn is a Thai actor and model. He is known for his roles in BL series like 'Theory of Love' and 'Senior Secret Love: Puppy Honey'.",
+                birthdate: "January 20, 1991",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/off_tumcial/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [9, 10, 24]
+            },
+            {
+                id: 8,
+                name: "Gun Atthaphan",
+                bio: "Thai actor and model",
+                about: "",
+                birthdate: "October 4, 1993",
+                height: "170 cm",
+                instagram: "https://www.instagram.com/gun_atthaphan/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [9, 10, 11, 24]
+            },
+            {
+                id: 9,
+                name: "Krist Perawat",
+                bio: "Thai actor and singer",
+                about: "Krist Perawat Sangpotirat is a Thai actor and singer. He is known for his role as Arthit in 'SOTUS: The Series'.",
+                birthdate: "October 18, 1995",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/kristtps/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [12, 13]
+            },
+            {
+                id: 10,
+                name: "Singto Prachaya",
+                bio: "Thai actor and model",
+                about: "Singto Prachaya Ruangroj is a Thai actor and model. He is known for his role as Kongpob in 'SOTUS: The Series'.",
+                birthdate: "July 28, 1994",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/singto_news/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [12, 13]
+            },
+            {
+                id: 11,
+                name: "Ohm Pawat",
+                bio: "Thai actor and model",
+                about: "Ohm Pawat Chittsawangdee is a Thai actor and model. He is known for his roles in BL series like 'Make It Right' and 'He's Coming to Me'.",
+                birthdate: "March 22, 1997",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/ohmpawat/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [14, 15]
+            },
+            {
+                id: 12,
+                name: "Nanon Korapat",
+                bio: "Thai actor and model",
+                about: "Nanon Korapat Kirdpan is a Thai actor and model. He is known for his role in 'Bad Buddy' series.",
+                birthdate: "December 18, 2000",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/nanon.korapat/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [16]
+            },
+            {
+                id: 13,
+                name: "Earth Pirapat",
+                bio: "Thai actor and model",
+                about: "Earth Pirapat Watthanasetsiri is a Thai actor and model. He is known for his roles in 'Water Boyy' and 'Love By Chance'.",
+                birthdate: "February 23, 1994",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/earthmix/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [17, 18]
+            },
+            {
+                id: 14,
+                name: "Mix Sahaphap",
+                bio: "Thai actor and model",
+                about: "Mix Sahaphap Wongratch is a Thai actor and model. He is known for his role in 'A Tale of Thousand Stars'.",
+                birthdate: "October 22, 1996",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/mixxiw/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [17]
+            },
+            {
+                id: 15,
+                name: "Drake Sattabut",
+                bio: "Thai actor and model",
+                about: "Drake Sattabut Laedeke is a Thai actor and model. He is known for his roles in 'Together With Me' and 'Bad Romance'.",
+                birthdate: "June 30, 1996",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/drake_laedeke/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [19, 20]
+            },
+            {
+                id: 16,
+                name: "Frank Thanatsaran",
+                bio: "Thai actor and model",
+                about: "Frank Thanatsaran Samthonglai is a Thai actor and model. He is known for his roles in 'Together With Me' and 'Bad Romance'.",
+                birthdate: "December 20, 1996",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/frank_thanatsaran/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [19, 20]
+            },
+            {
+                id: 17,
+                name: "Boun Noppanut",
+                bio: "Thai actor and model",
+                about: "Boun Noppanut Guntachai is a Thai actor and model. He is known for his role in 'Until We Meet Again'.",
+                birthdate: "December 6, 1997",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/bounprem/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [21]
+            },
+            {
+                id: 18,
+                name: "Prem Warut",
+                bio: "Thai actor and model",
+                about: "Prem Warut Chawalitrujiwong is a Thai actor and model. He is known for his role in 'Until We Meet Again'.",
+                birthdate: "February 15, 1997",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/prem_space/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [21]
+            },
+            {
+                id: 19,
+                name: "Saint Suppapong",
+                bio: "Thai actor and model",
+                about: "Saint Suppapong Udomkaewkanjana is a Thai actor and model. He is known for his role as Pete in 'Love By Chance'.",
+                birthdate: "March 11, 1998",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/saint_sup/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [22]
+            },
+            {
+                id: 20,
+                name: "Zee Pruk",
+                bio: "Thai actor and model",
+                about: "Zee Pruk Panich is a Thai actor and model. He is known for his role in 'Why R U?' series.",
+                birthdate: "October 7, 1992",
+                height: "178 cm",
+                instagram: "https://www.instagram.com/zee_pruk/",
+                image: "https://i.mydramalist.com/7wDzE_5c.jpg",
+                dramas: [23]
+            }
+        ];
+
+        // Data for all dramas
+        const dramas = [
+            {
+                id: 1,
+                title: "2gether: The Series",
+                year: "2020",
+                synopsis: "Tine, a popular university student, tries to get rid of an unwanted admirer by asking Sarawat, the campus heartthrob, to pretend to be his boyfriend. However, as they spend more time together, their fake relationship begins to develop into something more.",
+                episodes: "13",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [1, 2]
+            },
+            {
+                id: 2,
+                title: "Still 2gether",
+                year: "2020",
+                synopsis: "The continuation of Sarawat and Tine's relationship as they navigate through university life and their deepening feelings for each other.",
+                episodes: "5",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [1, 2]
+            },
+            {
+                id: 3,
+                title: "2gether: The Movie",
+                year: "2021",
+                synopsis: "A movie version of the popular series '2gether: The Series' featuring additional scenes and a recap of Sarawat and Tine's love story.",
+                episodes: "1",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [1, 2]
+            },
+            {
+                id: 4,
+                title: "TharnType: The Series",
+                year: "2019",
+                synopsis: "Type, a homophobic college student, is forced to share a dorm room with Tharn, a gay senior. Despite their initial animosity, their relationship gradually develops into something more complex.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [3, 4]
+            },
+            {
+                id: 5,
+                title: "TharnType: 7 Years of Love",
+                year: "2020",
+                synopsis: "A special episode that follows Tharn and Type seven years into their relationship as they face new challenges together.",
+                episodes: "1",
+                status: "Completed",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [3, 4]
+            },
+            {
+                id: 6,
+                title: "Dark Blue Kiss",
+                year: "2019",
+                synopsis: "The story focuses on Pete and Kao's relationship as they navigate the challenges of being a couple while keeping their relationship a secret from Kao's mother.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [5, 6]
+            },
+            {
+                id: 7,
+                title: "Kiss Me Again",
+                year: "2018",
+                synopsis: "A continuation of the story from 'Kiss: The Series', focusing on different couples including Pete and Kao who begin to develop feelings for each other.",
+                episodes: "14",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [5, 6]
+            },
+            {
+                id: 8,
+                title: "Our Skyy: Pete & Kao",
+                year: "2018",
+                synopsis: "A special episode focusing on Pete and Kao's relationship from 'Kiss Me Again' and 'Dark Blue Kiss'.",
+                episodes: "1",
+                status: "Completed",
+                genres: "Romance, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [5, 6]
+            },
+            {
+                id: 9,
+                title: "Theory of Love",
+                year: "2019",
+                synopsis: "Third has been secretly in love with his best friend Khai for years, but Khai only sees him as a friend. When Third decides to end their friendship, Khai begins to realize his true feelings.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [7, 8]
+            },
+            {
+                id: 10,
+                title: "Senior Secret Love: Puppy Honey",
+                year: "2016",
+                synopsis: "A story about a college senior who falls for his junior, not realizing that the junior is actually a girl disguised as a boy to get closer to him.",
+                episodes: "8",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [7, 8]
+            },
+            {
+                id: 11,
+                title: "The Shipper",
+                year: "2020",
+                synopsis: "A girl who loves BL stories accidentally causes two guys to switch bodies and then tries to set them up as a couple.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Comedy, Fantasy, Romance, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [8]
+            },
+            {
+                id: 12,
+                title: "SOTUS: The Series",
+                year: "2016",
+                synopsis: "A story about the hazing traditions in a university engineering faculty, focusing on the relationship between strict head hazer Arthit and rebellious freshman Kongpob.",
+                episodes: "15",
+                status: "Completed",
+                genres: "Romance, Drama, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [9, 10]
+            },
+            {
+                id: 13,
+                title: "SOTUS S: The Series",
+                year: "2017",
+                synopsis: "The continuation of Arthit and Kongpob's relationship as Kongpob becomes a head hazer and Arthit starts working at his first job.",
+                episodes: "13",
+                status: "Completed",
+                genres: "Romance, Drama, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [9, 10]
+            },
+            {
+                id: 14,
+                title: "He's Coming to Me",
+                year: "2019",
+                synopsis: "A ghost who has been stuck in the same place for 20 years meets a boy who can see him, and together they try to solve the mystery of the ghost's death.",
+                episodes: "8",
+                status: "Completed",
+                genres: "Romance, Supernatural, Mystery, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [11]
+            },
+            {
+                id: 15,
+                title: "Make It Right: The Series",
+                year: "2016",
+                synopsis: "A story about a group of high school friends navigating love and relationships, including several BL couples.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [11]
+            },
+            {
+                id: 16,
+                title: "Bad Buddy",
+                year: "2021",
+                synopsis: "Two university students from rival faculties are forced to work together on a project, but their initial animosity turns into something more.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [12]
+            },
+            {
+                id: 17,
+                title: "A Tale of Thousand Stars",
+                year: "2021",
+                synopsis: "A spoiled rich young man receives a heart transplant and travels to a rural village to find the donor's old life, where he meets a forest ranger and begins to change his ways.",
+                episodes: "10",
+                status: "Completed",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [13, 14]
+            },
+            {
+                id: 18,
+                title: "Water Boyy: The Series",
+                year: "2017",
+                synopsis: "A story about a university swimming club and the relationships between its members.",
+                episodes: "14",
+                status: "Completed",
+                genres: "Romance, Sports, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [13]
+            },
+            {
+                id: 19,
+                title: "Together With Me",
+                year: "2017",
+                synopsis: "Two best friends who had a drunken one-night stand try to maintain their friendship while dealing with their growing feelings for each other.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [15, 16]
+            },
+            {
+                id: 20,
+                title: "Bad Romance",
+                year: "2018",
+                synopsis: "A spin-off of 'Together With Me' focusing on different couples and their complicated relationships.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [15, 16]
+            },
+            {
+                id: 21,
+                title: "Until We Meet Again",
+                year: "2019",
+                synopsis: "Two university students discover they are the reincarnations of a couple who died by suicide 30 years ago, and they try to uncover the truth about their past lives.",
+                episodes: "17",
+                status: "Completed",
+                genres: "Romance, Drama, Reincarnation, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [17, 18]
+            },
+            {
+                id: 22,
+                title: "Love By Chance",
+                year: "2018",
+                synopsis: "A naive freshman accidentally gets hit by the car of a popular senior, leading to an unexpected relationship between the two.",
+                episodes: "14",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [19]
+            },
+            {
+                id: 23,
+                title: "Why R U?",
+                year: "2020",
+                synopsis: "Two university students from different faculties are forced to work together, leading to an unexpected romance.",
+                episodes: "12",
+                status: "Completed",
+                genres: "Romance, Comedy, School, BL",
+                image: "https://i.mydramalist.com/RyY3J_5c.jpg",
+                cast: [20]
+            }
+        ];
+
+        // Data for upcoming dramas
+        const upcomingDramas = [
+            {
+                id: 24,
+                title: "Burnout Syndrome",
+                year: "2025",
+                synopsis: "Down on his luck, a recently graduated artist takes on a strange new job meeting people as the face of his employer, opening up a chaotic new chapter in his life as he finds himself caught between his new employer and coworker.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/JBvqbJ_4c.jpg?v=1",
+                cast: [1, 2]
+            },
+            {
+                id: 25,
+                title: "Dare You to Death",
+                year: "2025",
+                synopsis: "When Puifai dies after a night of partying with friends, new police inspector Khamin and Captain Jade, adversaries, join forces to find out the truth behind her passing. The case, however, proves not to be as simple as it first appears.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Thriller, Mystrey, Romance, BL",
+                image: "https://i.mydramalist.com/zBKYbA_4c.jpg?v=1",
+                cast: []
+            },
+            {
+                id: 26,
+                title: "Head 2 Head",
+                year: "2025",
+                synopsis: "Jay and Jinn are longtime rivals and persistent friends. They can't see each other without exchanging insults or a harsh glance. When Jay has a vision of Jinn's death and ends up in a crash, he's unwillingly put into Jinn's care while he recovers. In time, he comes to realise how impossible it would be to live without him..",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Comedy, Romance, Drama, BL",
+                image: "https://i.mydramalist.com/Nd4Qoe_4c.jpg?v=1",
+                cast: []
+            },
+            {
+                id: 27,
+                title: "Melody of Secrets",
+                year: "2025",
+                synopsis: "Something drives crime journalist Botphleng on a search for his lover Tankhun, however, his memories are somehow distorted and he can't remember the man's appearance. Is criminologist Tankhun, who swears he's Botphleng's lover, the person he claims to be?",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Thriller, Mystrey, Romance, BL",
+                image: "https://i.mydramalist.com/ABop44_4c.jpg?v=1",
+                cast: []
+            },
+            {
+                id: 28,
+                title: "Only Friends: Dream On",
+                year: "2025",
+                synopsis: "Drama, directing, art, music, and dance majors are caught in a tangled web of competition, casual sex and vulnerability. Jack is directing his ex Dean on stage in a role that Raffy wants. Dean tries to get Jack's younger brother Rome to block Raffy out of his life. Part of the stage production of Romeo & Romeo is Tua who harbours feelings for starring actor and dancer Arnold.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Romance, Drama, BL",
+                image: "https://i.mydramalist.com/JBX5Xo_4c.jpg?v=1",
+                cast: []
+            },
+            {
+                id: 29,
+                title: "That Summer",
+                year: "2025",
+                synopsis: "Lava's mother sends him to live with his young uncle by the beach and he's immediately put to work. One day, he finds a man washed up on the shore. At the hospital, Dr. Wut diagnoses the man with amnesia and his uncle volunteers Lava as his caretaker. Lava names him Wave and reassigns all his duties to the stranger. Wave is surprisingly fussy and inept at manual labor, hinting at a pampered past.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Drama, Romance, BL",
+                image: "https://i.mydramalist.com/Dk43Yy_4c.jpg?v=1",
+                cast: []
+            },
+            {
+                id: 30,
+                title: "My Romance Scammer",
+                year: "2025",
+                synopsis: "Tim and Yu, two con artists devise a plan to scam two wealthy cousins, Pai and North, by luring them into deceptive marriages. However, complications arise when the scammers start to fall genuinely in love with their targets. What will happen when their true identities are revealed? Will the relationships they've built survive the truth?.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Romance, BL",
+                image: "https://i.mydramalist.com/YYqO4Q_4c.jpg?v=1",
+                cast: []
+            },
+            {
+                id: 30,
+                title: "Love You Teacher",
+                year: "2025",
+                synopsis: "Elementary school teacher Pobmek doesn't like kids, but his boyfriend Teacher Solar does, and he likes Solar more than enough to make up for it. When he suffers an accident, however, Solar is left with brain damage, reverting mentally at times to the age of seven. After he takes Nong Solar back home, there are days when Pobmek doesn't get any respite from children.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Comedy, Romance, Drama",
+                image: "https://i.mydramalist.com/b3kgN6_4c.jpg?v=1",
+                cast: []
+            },
+            {
+              id: 31,
+                title: "Mu-Te-Luv",
+                year: "2025",
+                synopsis: "This anthology tells seven stories of people who use supernatural forces to meet their goals.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Comedy, Romance, Supernatural",
+                image: "https://i.mydramalist.com/l0lgZQ_4c.jpg?v=1",
+                cast: []
+            },
+            {
+              id: 32,
+                title: "Cat for Cash",
+                year: "2025",
+                synopsis: "A man who hates his mother and cats is forced to look after his mother's cat plus work with a handsome debt collector—and certified cat person—to get rid of the debt his mother built.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Romance, Fantasy",
+                image: "https://i.mydramalist.com/l0lgZL_4c.jpg?v=1",
+                cast: []
+            },
+            {
+              id: 33,
+                title: "My Magic Prophecy",
+                year: "2025",
+                synopsis: "Dr. Thap, who doesn't believe in horoscopes or destiny, is forced into a position where he has to flee for his life with the help of fortune-teller In.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Romance, Drama",
+                image: "https://i.mydramalist.com/ABopQX_4c.jpg?v=1",
+                cast: []
+            },
+            {
+              id: 34,
+                title: "A Dog and a Plane",
+                year: "2025",
+                synopsis: "After flight attendant Khanit clashes with three EMTs and his bag is accidentally exchanged with EMT Toto's, the chaotic trio borrow his expensive belongings for a night out and they get stolen. When the truth comes out and Toto can't afford to pay Khanit back, he agrees to a trade of labour. Khanit tasks Toto with uncovering his boyfriend's cheating. When he does, however, Toto is bribed by Khanit's pilot boyfriend to keep it quiet. As the two spend more time together and their closeness grows, Toto may begin to regret his lie.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Comedy, Romance",
+                image: "https://i.mydramalist.com/YYqO5P_4c.jpg?v=1",
+                cast: []
+            },
+            {
+              id: 35,
+                title: "Me and Thee",
+                year: "2025",
+                synopsis: "After a dramatic first encounter, photographer Peach becomes an amateur life coach to wealthy businessman Thee. Fixated on lakorns and out of touch with the value of a baht, Khun Thee needs to get a grip on reality.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Comedy, Romance",
+                image: "https://i.mydramalist.com/zBKYJz_4c.jpg?v=1",
+                cast: []
+            },
+            {
+              id: 36,
+                title: "Wu",
+                year: "2025",
+                synopsis: "The fateful meeting of two people who will change the fates of countless more.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Drama, Fantasy",
+                image: "https://i.mydramalist.com/PxrgL8_4c.jpg?v=1",
+                cast: []
+            },
+            {
+              id: 37,
+                title: "Ticket to Heaven",
+                year: "2025",
+                synopsis: "When troubled Barth moves into his school, young seminarian Tanrak is asked to look after him and put him on the right path. Barth's presence, however, accidentally serves to test Tanrak as he struggles to reconcile his innate feelings with his faith and fears for his future.",
+                episodes: "TBA",
+                status: "Upcoming",
+                genres: "Romance, Youth, Drama",
+                image: "https://i.mydramalist.com/JBvqyw_4c.jpg?v=1",
+                cast: []
+            }
+            
+        ];
+
+        // DOM elements
+        const navLinks = document.querySelectorAll('.nav-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const searchInput = document.getElementById('search-input');
+        const actorsGrid = document.getElementById('actors-grid');
+        const dramasGrid = document.getElementById('dramas-grid');
+        const upcomingGrid = document.getElementById('upcoming-grid');
+        const featuredActors = document.getElementById('featured-actors');
+        const featuredDramas = document.getElementById('featured-dramas');
+        const actorDetail = document.getElementById('actor-detail');
+        const dramaDetail = document.getElementById('drama-detail');
+        const backToActors = document.getElementById('back-to-actors');
+        const backToDramas = document.getElementById('back-to-dramas');
+
+        // Featured actors (first 6 actors)
+        const featuredActorsList = actors.slice(0, 6);
+        // Featured dramas (first 6 dramas)
+        const featuredDramasList = dramas.slice(0, 6);
+
+        // Initialize the page
+        function init() {
+            renderFeaturedActors();
+            renderFeaturedDramas();
+            renderAllActors();
+            renderAllDramas();
+            renderUpcomingDramas();
+            setupEventListeners();
+        }
+
+        // Render featured actors
+        function renderFeaturedActors() {
+            featuredActors.innerHTML = '';
+            featuredActorsList.forEach(actor => {
+                featuredActors.appendChild(createActorCard(actor));
+            });
+        }
+
+        // Render featured dramas
+        function renderFeaturedDramas() {
+            featuredDramas.innerHTML = '';
+            featuredDramasList.forEach(drama => {
+                featuredDramas.appendChild(createDramaCard(drama));
+            });
+        }
+
+        // Render all actors
+        function renderAllActors() {
+            actorsGrid.innerHTML = '';
+            actors.forEach(actor => {
+                actorsGrid.appendChild(createActorCard(actor));
+            });
+        }
+
+        // Render all dramas
+        function renderAllDramas() {
+            dramasGrid.innerHTML = '';
+            dramas.forEach(drama => {
+                dramasGrid.appendChild(createDramaCard(drama));
+            });
+        }
+
+        // Render upcoming dramas
+        function renderUpcomingDramas() {
+            upcomingGrid.innerHTML = '';
+            upcomingDramas.forEach(drama => {
+                upcomingGrid.appendChild(createDramaCard(drama, true));
+            });
+        }
+
+        // Create actor card element
+        function createActorCard(actor) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.dataset.id = actor.id;
+            
+            card.innerHTML = `
+                <img src="${actor.image}" alt="${actor.name}" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">${actor.name}</h3>
+                    <p class="card-subtitle">${actor.bio}</p>
+                    <p class="card-text">${actor.about}</p>
+                    <a href="#" class="btn view-actor-btn">View Details</a>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Create drama card element
+        function createDramaCard(drama, isUpcoming = false) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.dataset.id = drama.id;
+            
+            const statusBadge = isUpcoming ? '<span class="status-upcoming">Upcoming</span>' : 
+                                          (drama.status === 'Completed' ? '' : '<span class="status-ongoing">Ongoing</span>');
+            
+            card.innerHTML = `
+                <img src="${drama.image}" alt="${drama.title}" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">${drama.title} ${statusBadge}</h3>
+                    <p class="card-subtitle">${drama.year} • ${drama.genres.split(', ')[0]}</p>
+                    <p class="card-text">${drama.synopsis}</p>
+                    <a href="#" class="btn view-drama-btn">View Details</a>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Show actor details
+        function showActorDetails(actorId) {
+            const actor = actors.find(a => a.id === actorId);
+            if (!actor) return;
+            
+            document.getElementById('actor-detail-name').textContent = actor.name;
+            document.getElementById('actor-detail-bio').textContent = actor.bio;
+            document.getElementById('actor-detail-about').textContent = actor.about;
+            document.getElementById('actor-detail-birthdate').textContent = actor.birthdate;
+            document.getElementById('actor-detail-height').textContent = actor.height;
+            
+            const instagramLink = document.getElementById('actor-detail-instagram');
+            instagramLink.textContent = actor.instagram.replace('https://www.instagram.com/', '@');
+            instagramLink.href = actor.instagram;
+            
+            const img = document.getElementById('actor-detail-img');
+            img.src = actor.image;
+            img.alt = actor.name;
+            
+            // Render actor's dramas
+            const dramasGrid = document.getElementById('actor-dramas-grid');
+            dramasGrid.innerHTML = '';
+            
+            actor.dramas.forEach(dramaId => {
+                const drama = dramas.find(d => d.id === dramaId);
+                if (drama) {
+                    dramasGrid.appendChild(createDramaCard(drama));
+                }
+            });
+            
+            // Hide all tab contents and show actor detail
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            actorDetail.style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Show drama details
+        function showDramaDetails(dramaId) {
+            let drama = dramas.find(d => d.id === dramaId);
+            if (!drama) {
+                drama = upcomingDramas.find(d => d.id === dramaId);
+            }
+            if (!drama) return;
+            
+            document.getElementById('drama-detail-title').textContent = drama.title;
+            document.getElementById('drama-detail-year').textContent = drama.year;
+            document.getElementById('drama-detail-synopsis').textContent = drama.synopsis;
+            document.getElementById('drama-detail-episodes').textContent = drama.episodes;
+            document.getElementById('drama-detail-status').textContent = drama.status;
+            document.getElementById('drama-detail-genres').textContent = drama.genres;
+            
+            const img = document.getElementById('drama-detail-img');
+            img.src = drama.image;
+            img.alt = drama.title;
+            
+            // Render drama's cast
+            const castGrid = document.getElementById('drama-cast-grid');
+            castGrid.innerHTML = '';
+            
+            drama.cast.forEach(actorId => {
+                const actor = actors.find(a => a.id === actorId);
+                if (actor) {
+                    castGrid.appendChild(createActorCard(actor));
+                }
+            });
+            
+            // Hide all tab contents and show drama detail
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            dramaDetail.style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Navigation tabs
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Update active nav link
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    
+                    // Show corresponding tab content
+                    const tab = link.dataset.tab;
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === tab) {
+                            content.classList.add('active');
+                        }
+                    });
+                    
+                    // Hide detail views
+                    actorDetail.style.display = 'none';
+                    dramaDetail.style.display = 'none';
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Back buttons
+            backToActors.addEventListener('click', (e) => {
+                e.preventDefault();
+                actorDetail.style.display = 'none';
+                document.getElementById('actors').classList.add('active');
+                document.querySelector('[data-tab="actors"]').classList.add('active');
+                window.scrollTo(0, 0);
+            });
+            
+            backToDramas.addEventListener('click', (e) => {
+                e.preventDefault();
+                dramaDetail.style.display = 'none';
+                
+                // Determine which tab to go back to based on drama type
+                const dramaId = parseInt(dramaDetail.querySelector('.card').dataset.id);
+                const isUpcoming = upcomingDramas.some(d => d.id === dramaId);
+                
+                if (isUpcoming) {
+                    document.getElementById('upcoming').classList.add('active');
+                    document.querySelector('[data-tab="upcoming"]').classList.add('active');
+                } else {
+                    document.getElementById('dramas').classList.add('active');
+                    document.querySelector('[data-tab="dramas"]').classList.add('active');
+                }
+                
+                window.scrollTo(0, 0);
+            });
+            
+            // View actor buttons (delegated event)
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('view-actor-btn')) {
+                    e.preventDefault();
+                    const card = e.target.closest('.card');
+                    showActorDetails(parseInt(card.dataset.id));
+                }
+            });
+            
+            // View drama buttons (delegated event)
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('view-drama-btn')) {
+                    e.preventDefault();
+                    const card = e.target.closest('.card');
+                    showDramaDetails(parseInt(card.dataset.id));
+                }
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                if (searchTerm.length < 2) {
+                    renderAllActors();
+                    renderAllDramas();
+                    renderUpcomingDramas();
+                    return;
+                }
+                
+                // Search actors
+                const filteredActors = actors.filter(actor => 
+                    actor.name.toLowerCase().includes(searchTerm) || 
+                    actor.bio.toLowerCase().includes(searchTerm) ||
+                    actor.about.toLowerCase().includes(searchTerm)
+                );
+                
+                actorsGrid.innerHTML = '';
+                if (filteredActors.length > 0) {
+                    filteredActors.forEach(actor => {
+                        actorsGrid.appendChild(createActorCard(actor));
+                    });
+                } else {
+                    actorsGrid.innerHTML = '<div class="no-results">No actors found matching your search.</div>';
+                }
+                
+                // Search dramas
+                const filteredDramas = dramas.filter(drama => 
+                    drama.title.toLowerCase().includes(searchTerm) ||
+                    drama.synopsis.toLowerCase().includes(searchTerm) ||
+                    drama.genres.toLowerCase().includes(searchTerm)
+                );
+                
+                dramasGrid.innerHTML = '';
+                if (filteredDramas.length > 0) {
+                    filteredDramas.forEach(drama => {
+                        dramasGrid.appendChild(createDramaCard(drama));
+                    });
+                } else {
+                    dramasGrid.innerHTML = '<div class="no-results">No dramas found matching your search.</div>';
+                }
+                
+                // Search upcoming dramas
+                const filteredUpcoming = upcomingDramas.filter(drama => 
+                    drama.title.toLowerCase().includes(searchTerm) ||
+                    drama.synopsis.toLowerCase().includes(searchTerm) ||
+                    drama.genres.toLowerCase().includes(searchTerm)
+                );
+                
+                upcomingGrid.innerHTML = '';
+                if (filteredUpcoming.length > 0) {
+                    filteredUpcoming.forEach(drama => {
+                        upcomingGrid.appendChild(createDramaCard(drama, true));
+                    });
+                } else {
+                    upcomingGrid.innerHTML = '<div class="no-results">No upcoming dramas found matching your search.</div>';
+                }
+            });
+        }
+
+        // Initialize the page when loaded
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

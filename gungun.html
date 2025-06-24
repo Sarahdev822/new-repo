@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gun Atthaphan | Fan Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Gun Atthaphan</h1>
+            <p>Actor • Model • BL Icon</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#bio">Biography</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Biography Section -->
+    <section id="bio" class="section">
+        <div class="container">
+            <h2>Biography</h2>
+            <div class="bio-content">
+                <img src="https://i.mydramalist.com/7wDzE_5c.jpg" alt="Gun Atthaphan" class="bio-img">
+                <div class="bio-text">
+                    <p><strong>Name:</strong> Gun Atthaphan Phunsawat (กัน อรรถพันธ์)</p>
+                    <p><strong>Birthdate:</strong> October 4, 1993</p>
+                    <p><strong>Height:</strong> 170 cm</p>
+                    <p><strong>Nationality:</strong> Thai</p>
+                    <p><strong>Known For:</strong> <i>Theory of Love, Not Me, The Gifted</i></p>
+                    <p>Gun Atthaphan is a Thai actor and model, best known for his roles in Boys' Love (BL) dramas. He gained international fame for his performances in <i>Theory of Love</i> (2019) and <i>Not Me</i> (2021).</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/gun_atthaphan/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/gun_atthaphan" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/GunAtthaphan" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Image Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.mydramalist.com/RyY3J_5c.jpg" alt="Gun Atthaphan 1" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.mydramalist.com/RyY3J_5c.jpg" alt="Gun Atthaphan 2" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.mydramalist.com/RyY3J_5c.jpg" alt="Gun Atthaphan 3" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.mydramalist.com/RyY3J_5c.jpg" alt="Gun Atthaphan 4" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.mydramalist.com/RyY3J_5c.jpg" alt="Gun Atthaphan 5" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.mydramalist.com/RyY3J_5c.jpg" alt="Gun Atthaphan 6" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery Images -->
+    <div id="galleryModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact / Fan Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Gun Atthaphan Fan Site | Made with ❤️ by a Fan</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
