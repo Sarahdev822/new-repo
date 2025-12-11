@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucian - Artisan Fragrances</title>
+    <style>
+        :root {
+            --gold: #FFD700;
+            --teal: #40E0D0;
+            --cream: #F5F0E6;
+            --taupe: #B8A99A;
+            --cognac: #9A5B40;
+            --text: #3E3E3E;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        body {
+            background-color: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Compact Header */
+        header {
+            background: linear-gradient(rgba(245,240,230,0.9), rgba(245,240,230,0.9)), url('https://images.unsplash.com/photo-1615228939092-c6c6bf81beb9a?ixlib=rb-4.0.3') center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            border-bottom: 1px solid var(--taupe);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            color: var(--cognac);
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: var(--cognac);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--cognac);
+            color: var(--cream);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid var(--cognac);
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--cognac);
+        }
+        
+        /* Sticky Shopping Cart */
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--cognac);
+            color: var(--cream);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 1001;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--teal);
+            color: var(--text);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .cart-panel {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: var(--cream);
+            border-left: 1px solid var(--taupe);
+            padding: 30px;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .cart-panel.active {
+            right: 0;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--taupe);
+            padding-bottom: 10px;
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            color: var(--cognac);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .cart-items {
+            margin-bottom: 20px;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--taupe);
+        }
+        
+        .cart-total {
+            font-size: 1.2rem;
+            text-align: right;
+            margin-top: 20px;
+            color: var(--cognac);
+            font-weight: bold;
+        }
+        
+        /* Our Story Section */
+        .story {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .story h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--cognac);
+            position: relative;
+        }
+        
+        .story h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: var(--taupe);
+            bottom: -10px;
+            left: calc(50% - 50px);
+        }
+        
+        .story p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: rgba(184, 169, 154, 0.1);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--cognac);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: var(--taupe);
+            bottom: -10px;
+            left: calc(50% - 50px);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .product-card {
+            background: var(--cream);
+            padding: 25px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--taupe);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--cognac);
+            box-shadow: 0 10px 20px rgba(154, 91, 64, 0.1);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 1px solid var(--taupe);
+        }
+        
+        .product-name {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--cognac);
+        }
+        
+        .product-price {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text);
+            font-weight: bold;
+        }
+        
+        .add-to-cart {
+            background: var(--cognac);
+            color: var(--cream);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background: var(--taupe);
+        }
+        
+        footer {
+            background: var(--taupe);
+            text-align: center;
+            padding: 30px;
+            color: var(--cream);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                height: 50vh;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .cart-panel {
+                width: 100%;
+                right: -100%;
+            }
+            
+            .cart-panel.active {
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">LUCIAN</h1>
+        <p class="tagline">The Essence of Timeless Elegance</p>
+        <a href="#products" class="cta-button">Explore Fragrances</a>
+    </header>
+    
+    <!-- Sticky Shopping Cart -->
+    <div class="cart-icon" id="cartIcon">
+        🛍️
+        <div class="cart-count" id="cartCount">0</div>
+    </div>
+    
+    <!-- Shopping Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>Your Fragrance Selection</h3>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">Total: $0</div>
+    </div>
+    
+    <!-- Our Story Section -->
+    <section class="story">
+        <h2>Our Story</h2>
+        <p>Lucian Fragrances was born in the sun-drenched hills of Provence, where founder Lucian Moreau first discovered his passion for perfumery as a child in his grandmother's lavender fields. After studying under master perfumers in Grasse, Lucian set out to create scents that capture fleeting moments of beauty and emotion.</p>
+        
+        <p>Each Lucian fragrance is crafted using the finest natural ingredients sourced from around the world. Our signature blends combine unexpected notes to create truly unique olfactory experiences. From the citrus groves of Sicily to the spice markets of Marrakech, every bottle tells a story of its origins.</p>
+        
+        <p>Today, Lucian remains a family-owned maison dedicated to artisan craftsmanship. We still use traditional techniques passed down through generations, while innovating with modern sustainable practices. Our perfumes are bottled by hand in our atelier, where every detail matters.</p>
+    </section>
+    
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2 class="section-title">Our Collection</h2>
+        <div class="product-grid" id="productContainer"></div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Lucian Fragrances. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Product data
+        const products = [
+            {
+                id: 1,
+                name: "Noir de Nuit",
+                price: 120,
+                image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3",
+                description: "A mysterious blend of oud, vanilla, and amber"
+            },
+            {
+                id: 2,
+                name: "Lumière d'Or",
+                price: 135,
+                image: "https://images.unsplash.com/photo-1615634262417-ae9d67d53a8a?ixlib=rb-4.0.3",
+                description: "Golden citrus top notes with a warm woody base"
+            },
+            {
+                id: 3,
+                name: "Rêve de Fleur",
+                price: 110,
+                image: "https://images.unsplash.com/photo-1615634262417-ae9d67d53a8a?ixlib=rb-4.0.3",
+                description: "Delicate floral bouquet with hints of jasmine and rose"
+            },
+            {
+                id: 4,
+                name: "Vent du Sud",
+                price: 125,
+                image: "https://images.unsplash.com/photo-1615634262417-ae9d67d53a8a?ixlib=rb-4.0.3",
+                description: "Fresh oceanic breeze with marine and citrus accords"
+            }
+        ];
+        
+        // DOM elements
+        const productContainer = document.getElementById('productContainer');
+        const cartIcon = document.getElementById('cartIcon');
+        const cartPanel = document.getElementById('cartPanel');
+        const closeCart = document.getElementById('closeCart');
+        const cartItems = document.getElementById('cartItems');
+        const cartCount = document.getElementById('cartCount');
+        const cartTotal = document.getElementById('cartTotal');
+        
+        // Shopping cart
+        let cart = [];
+        
+        // Display products
+        function displayProducts() {
+            productContainer.innerHTML = '';
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <h3 class="product-name">${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p class="product-price">$${product.price}</p>
+                    <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                `;
+                
+                productContainer.appendChild(productCard);
+            });
+            
+            // Add event listeners to buttons
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', addToCart);
+            });
+        }
+        
+        // Add to cart function
+        function addToCart(event) {
+            const productId = parseInt(event.target.getAttribute('data-id'));
+            const product = products.find(item => item.id === productId);
+            
+            if (product) {
+                cart.push(product);
+                updateCart();
+                
+                // Briefly highlight cart icon
+                cartIcon.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    cartIcon.style.transform = 'scale(1)';
+                }, 300);
+            }
+        }
+        
+        // Update cart
+        function updateCart() {
+            // Update cart count
+            cartCount.textContent = cart.length;
+            
+            // Update cart items
+            cartItems.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>Your fragrance journey begins here</p>';
+            } else {
+                cart.forEach(item => {
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.innerHTML = `
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>$${item.price}</p>
+                        </div>
+                    `;
+                    cartItems.appendChild(cartItem);
+                });
+            }
+            
+            // Update total
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            cartTotal.textContent = `Total: $${total}`;
+        }
+        
+        // Toggle cart panel
+        cartIcon.addEventListener('click', () => {
+            cartPanel.classList.add('active');
+        });
+        
+        closeCart.addEventListener('click', () => {
+            cartPanel.classList.remove('active');
+        });
+        
+        // Initialize the page
+        displayProducts();
+        updateCart();
+    </script>
+</body>
+</html>
